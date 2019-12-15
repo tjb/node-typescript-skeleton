@@ -1,5 +1,5 @@
-import App from "./app";
-import ExampleController from "./example.controller";
+import App from './app';
+import ExampleController from './example.controller';
 
 const app = new App(
   [

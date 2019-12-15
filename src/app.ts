@@ -1,7 +1,7 @@
-import express from "express";
-import bodyParser from "body-parser";
-import cors from "cors";
-import { Controller } from "./util/controller.interface";
+import express from 'express';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import { Controller } from './util/controller.interface';
 
 class App {
   public app: express.Application;
@@ -22,10 +22,10 @@ class App {
 
   private initializeControllers(controllers: Controller[]): void {
     controllers.forEach((controller: Controller) => {
-      this.app.use("/", controller.router);
+      this.app.use('/', controller.router);
     });
-    this.app.get("/hello", (req: express.Request, res: express.Response) =>
-      res.status(201).send("Hello World!")
+    this.app.get('/hello', (req: express.Request, res: express.Response) =>
+      res.status(201).send('Hello World!')
     );
   }
 
